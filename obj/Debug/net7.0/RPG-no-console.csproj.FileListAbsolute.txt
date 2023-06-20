@@ -1,0 +1,15 @@
+C:\Users\56026708820\Desktop\RPG-no-console\bin\Debug\net7.0\RPG-no-console.exe
+C:\Users\56026708820\Desktop\RPG-no-console\bin\Debug\net7.0\RPG-no-console.deps.json
+C:\Users\56026708820\Desktop\RPG-no-console\bin\Debug\net7.0\RPG-no-console.runtimeconfig.json
+C:\Users\56026708820\Desktop\RPG-no-console\bin\Debug\net7.0\RPG-no-console.dll
+C:\Users\56026708820\Desktop\RPG-no-console\bin\Debug\net7.0\RPG-no-console.pdb
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.csproj.AssemblyReference.cache
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.AssemblyInfoInputs.cache
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.AssemblyInfo.cs
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.csproj.CoreCompileInputs.cache
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.dll
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\refint\RPG-no-console.dll
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.pdb
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\RPG-no-console.genruntimeconfig.cache
+C:\Users\56026708820\Desktop\RPG-no-console\obj\Debug\net7.0\ref\RPG-no-console.dll
