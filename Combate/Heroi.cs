@@ -8,9 +8,10 @@ namespace RPG_no_console.Combate
     public class Heroi
     {
         public string ? Nome;
-        public static int Vida = 40;
-        public static int Ataque;
-        public static int Defesa;
+        public int Vida = 40;
+        public static int VidaMaxima = 40;
+        public static int Ataque = 5;
+        public static int Defesa = 5;
         public static int Energia = 40;
 
         public int DanoAtaque()
@@ -18,7 +19,6 @@ namespace RPG_no_console.Combate
             Random rndAtk = new Random();
             int dice = rndAtk.Next(1, 21);
 
-            Ataque = 3;
             int dano = 0;
 
             if (dice <= 4)
@@ -58,7 +58,7 @@ namespace RPG_no_console.Combate
         public void ExibirVida()
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.Write($"Vida:    ");
+            Console.Write($"PV: ");
             Console.ResetColor();
             for (int i = 0; i < Vida; i++)
             {
@@ -70,7 +70,7 @@ namespace RPG_no_console.Combate
             Console.WriteLine($"");
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.Write($"Energia: ");
+            Console.Write($"PE: ");
             Console.ResetColor();
             for (int i = 0; i < Energia; i++)
             {
@@ -79,21 +79,53 @@ namespace RPG_no_console.Combate
                 Console.ResetColor();
             }
 
+            Console.WriteLine($"");
+        }
+
+
+        public void ExibirStatus()
+        {
+            Console.WriteLine(@$"
+    |==========|
+    | Nome: {Nome}   |
+    | PV: {Vida}   |
+    | PE: {Energia}   |
+    | PvMax: {VidaMaxima}|
+    | ATK: {Ataque}   |
+    | DEF: {Defesa}   |
+    |==========|
+            ");
+            
         }
 
         public void ReceberDano(int danoInimigo)
         {
+            float resistencia = (float)((Vida + Defesa) * 0.1);
+
+            danoInimigo = (int)(danoInimigo - resistencia);
+
             Vida -= danoInimigo;
         }
 
-        public void Defender()
+        public void RecuperarVida(int recuperado)
         {
+            Vida = Vida + recuperado;
 
+            if (Vida > VidaMaxima)
+            {
+                Vida = VidaMaxima;
+            }
         }
 
-        public void Especial()
+        public int Especial()
         {
+            int danoEspecial = Ataque * 10;
 
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"DANO SUPREMO {danoEspecial}!");
+            Console.ResetColor();
+
+            return danoEspecial;
         }
     }
 
