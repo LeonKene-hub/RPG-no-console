@@ -1,15 +1,19 @@
 ﻿using RPG_no_console.Combate;
 
-Heroi teste = new Heroi();
+Heroi hero = new Heroi();
+Inimigo ini = new Inimigo();
 
-Console.WriteLine($"{teste.DanoAtaque()}");
-teste.ReceberDano(31);
-teste.ExibirVida();
+Inimigo a = ini.Gerar();
 
-Console.WriteLine($"==================================");
+ini.ExibirVidaIni(a);
+ini.ReceberDanoIni(a, hero.DanoAtaque());
 
-teste.RecuperarVida(90);
-teste.ExibirVida();
-teste.Especial();
+ini.ExibirVidaIni(a);
 
-teste.ExibirStatus();
+Console.WriteLine($"==================");
+
+hero.ExibirVida();
+hero.ReceberDano(ini.DanoIni(a));
+Console.WriteLine($"");
+
+hero.ExibirVida();

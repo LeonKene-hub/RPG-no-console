@@ -24,33 +24,39 @@ namespace RPG_no_console.Combate
             if (dice <= 4)
             {
                 Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.Write($"Vc errou! ");
+                Console.Write($"Vc errou! {dano}");
                 Console.ResetColor();
+                Console.WriteLine($"");
+                
                 return dano;
             }
             else if (dice >= 5 && dice <= 10)
             {
                 dano = Ataque;
-                Console.Write($"Dano ");
+                Console.Write($"Dano {dano}");
+                Console.WriteLine($"");
                 return dano;
             }
             else if (dice >= 11 && dice <= 17)
             {
                 dano = ((int)(Ataque * 1.5));
-                Console.Write($"Dano! ");
+                Console.Write($"Dano! {dano}");
+                Console.WriteLine($"");
                 return dano;
             }
             else if (dice >= 18 && dice <= 20)
             {
                 dano = ((int)(Ataque * 2.2));
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write($"DANO CRITICO! ");
+                Console.Write($"DANO CRITICO! {dano}");
                 Console.ResetColor();
+                Console.WriteLine($"");
                 return dano;
             }
             else
             {
                 Console.Write($"Dano leve.. ");
+                Console.WriteLine($"");
                 return dano + Ataque;
             }
         }
@@ -82,7 +88,6 @@ namespace RPG_no_console.Combate
             Console.WriteLine($"");
         }
 
-
         public void ExibirStatus()
         {
             Console.WriteLine(@$"
@@ -105,6 +110,7 @@ namespace RPG_no_console.Combate
             danoInimigo = (int)(danoInimigo - resistencia);
 
             Vida -= danoInimigo;
+            Console.WriteLine($"Sofreu {danoInimigo}");
         }
 
         public void RecuperarVida(int recuperado)
@@ -116,7 +122,6 @@ namespace RPG_no_console.Combate
                 Vida = VidaMaxima;
             }
         }
-
         public int Especial()
         {
             int danoEspecial = Ataque * 10;
